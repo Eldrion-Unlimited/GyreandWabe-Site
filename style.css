@@ -802,4 +802,122 @@ h2 {
     gap: 12px;
     text-align: center;
   }
+
+   /* =========================================================
+   SECOND TYPOGRAPHY TIGHTENING — QUIETER ARCHIVE SCALE
+   ========================================================= */
+
+/* section labels: nearly engraved */
+.section-kicker {
+  font-size: 0.4rem;
+  letter-spacing: 0.28em;
+  margin-bottom: 22px;
+}
+
+/* gold eyebrow labels: smaller, colder */
+.eyebrow {
+  font-size: 0.42rem;
+  letter-spacing: 0.3em;
+  margin-bottom: 12px;
+}
+
+/* section headings: no longer hero-sized */
+h2 {
+  max-width: 660px;
+  font-size: clamp(1.1rem, 2vw, 2.15rem);
+  line-height: 1.22;
+  letter-spacing: 0.11em;
+}
+
+/* body copy: museum-label scale */
+p {
+  font-size: 0.68rem;
+  line-height: 1.72;
+}
+
+/* split copy should stay restrained */
+.split-layout p {
+  font-size: 0.72rem;
+  line-height: 1.75;
+}
+
+/* portal titles stay large because these ARE the visual buttons */
+.portal-card h3 {
+  font-size: clamp(2.75rem, 4.8vw, 5.8rem);
+  letter-spacing: 0.26em;
+}
+
+/* portal descriptions become quiet supporting labels */
+.portal-card p {
+  max-width: 260px;
+  min-height: 58px;
+  font-size: 0.58rem;
+  line-height: 1.6;
+  opacity: 0.72;
+}
+
+/* portal CTA labels stay readable */
+.portal-link {
+  font-size: 0.52rem;
+}
+
+/* archive cards tighten */
+.archive-card {
+  min-height: 145px;
+  padding: 28px 34px;
+}
+
+.archive-card h3 {
+  font-size: 0.92rem;
+}
+
+.archive-card p {
+  font-size: 0.58rem;
+}
+
+.registry-code,
+.status {
+  font-size: 0.4rem;
+}
+
+/* foundry stats and labels tighten */
+.stat-card span {
+  font-size: 2.65rem;
+}
+
+.stat-card p {
+  font-size: 0.42rem;
+}
+
+/* acquisition copy tighter */
+.acquire-panel h2 {
+  font-size: clamp(1.25rem, 2.4vw, 2.5rem);
+}
+
+.acquire-panel p {
+  font-size: 0.68rem;
+}
+
+/* footer becomes quieter */
+.site-footer {
+  font-size: 0.48rem;
+}
+
+/* mobile: preserve readability */
+@media (max-width: 900px) {
+  h2 {
+    font-size: clamp(1.25rem, 6vw, 2.1rem);
+  }
+
+  p {
+    font-size: 0.7rem;
+  }
+
+  .portal-card h3 {
+    font-size: 2.8rem;
+  }
+
+  .portal-card p {
+    font-size: 0.64rem;
+  }
 }
