@@ -1,18 +1,36 @@
+/* =========================================================
+   GYRE & WABE — STATIC GITHUB PAGES SITE
+   Luxury archive / gothic registry / collector house styling
+   ========================================================= */
+
+/* =========================
+   01. VARIABLES
+   ========================= */
+
 :root {
   --black: #050504;
   --black-soft: #0a0907;
   --panel: #0d0c09;
+
   --line: rgba(211, 174, 91, 0.16);
   --line-strong: rgba(211, 174, 91, 0.38);
+
   --gold: #c9a24f;
   --gold-soft: #8a6a2d;
+
   --ivory: #e9dec9;
   --muted: #8d8373;
   --dim: #50483c;
 
   --serif: Georgia, "Times New Roman", serif;
   --sans: Arial, Helvetica, sans-serif;
+
+  --header-height: 88px;
 }
+
+/* =========================
+   02. RESET / BASE
+   ========================= */
 
 * {
   box-sizing: border-box;
@@ -38,8 +56,8 @@ body::before {
   inset: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.012) 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.012) 1px, transparent 1px);
   background-size: 120px 120px;
   opacity: 0.22;
   z-index: 0;
@@ -66,14 +84,35 @@ main,
   z-index: 2;
 }
 
-/* HEADER */
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+
+p {
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.75;
+}
+
+/* =========================
+   03. HEADER
+   ========================= */
 
 .site-header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 88px;
+  height: var(--header-height);
   padding: 0 56px;
   display: flex;
   align-items: center;
@@ -102,14 +141,18 @@ main,
   letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--muted);
-  transition: color 180ms ease;
+  transition:
+    color 180ms ease,
+    opacity 180ms ease;
 }
 
 .site-nav a:hover {
   color: var(--gold);
 }
 
-/* GLOBAL SECTIONS */
+/* =========================
+   04. GLOBAL SECTIONS
+   ========================= */
 
 .section {
   min-height: 100vh;
@@ -118,52 +161,33 @@ main,
 }
 
 .section-kicker {
+  margin-bottom: 28px;
   font-family: var(--sans);
-  font-size: 0.62rem;
-  letter-spacing: 0.3em;
+  font-size: 0.48rem;
+  letter-spacing: 0.26em;
   text-transform: uppercase;
   color: var(--gold-soft);
-  margin-bottom: 42px;
 }
 
 .eyebrow {
-  margin: 0 0 20px;
+  margin: 0 0 14px;
   font-family: var(--sans);
-  font-size: 0.66rem;
-  letter-spacing: 0.34em;
+  font-size: 0.5rem;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--gold);
 }
 
-h1,
-h2,
-h3,
-p {
-  margin-top: 0;
-}
-
-h1,
-h2,
-h3 {
-  font-weight: 700;
-}
-
 h2 {
-  max-width: 920px;
-  font-size: clamp(2.25rem, 5vw, 5.5rem);
-  line-height: 1.06;
-  letter-spacing: 0.12em;
-}
-
-p {
-  color: var(--muted);
-  font-size: 1rem;
-  line-height: 1.85;
+  max-width: 760px;
+  font-size: clamp(1.45rem, 2.6vw, 3rem);
+  line-height: 1.18;
+  letter-spacing: 0.1em;
 }
 
 .section-heading {
-  max-width: 980px;
-  margin-bottom: 70px;
+  max-width: 860px;
+  margin-bottom: 58px;
 }
 
 .section-heading::after {
@@ -171,11 +195,13 @@ p {
   display: block;
   width: 56px;
   height: 1px;
-  margin-top: 38px;
+  margin-top: 32px;
   background: var(--gold);
 }
 
-/* BUTTONS */
+/* =========================
+   05. BUTTONS
+   ========================= */
 
 .button {
   display: inline-flex;
@@ -214,7 +240,9 @@ p {
   color: var(--muted);
 }
 
-/* HERO */
+/* =========================
+   06. HERO / SILENCE
+   ========================= */
 
 .hero-section {
   display: flex;
@@ -225,7 +253,44 @@ p {
 }
 
 .hero-inner {
+  position: relative;
+  isolation: isolate;
   margin: auto;
+}
+
+/* Ghosted diamond seal */
+.hero-inner::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 43%;
+  width: 390px;
+  height: 390px;
+  border: 1px solid rgba(201, 162, 79, 0.16);
+  transform: translate(-50%, -50%) rotate(45deg);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Ghosted G · W behind title */
+.hero-inner::after {
+  content: "G · W";
+  position: absolute;
+  left: 50%;
+  top: 43%;
+  transform: translate(-50%, -50%);
+  font-family: var(--serif);
+  font-size: 3.2rem;
+  letter-spacing: 0.34em;
+  color: rgba(201, 162, 79, 0.08);
+  text-transform: uppercase;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-inner > * {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-inner h1 {
@@ -266,7 +331,9 @@ p {
   color: var(--dim);
 }
 
-/* PORTALS */
+/* =========================
+   07. PORTALS
+   ========================= */
 
 .portals-section {
   padding-left: 0;
@@ -323,26 +390,30 @@ p {
 
 .portal-card h3 {
   margin-bottom: 26px;
-  font-size: clamp(2.5rem, 5vw, 5.7rem);
+  font-size: clamp(2.4rem, 4.4vw, 5.2rem);
   letter-spacing: 0.24em;
   text-transform: uppercase;
 }
 
 .portal-card p {
-  max-width: 360px;
-  min-height: 92px;
+  max-width: 300px;
+  min-height: 70px;
+  font-size: 0.72rem;
+  line-height: 1.65;
 }
 
 .portal-link {
   margin-top: 24px;
   font-family: var(--sans);
-  font-size: 0.62rem;
+  font-size: 0.58rem;
   letter-spacing: 0.26em;
   text-transform: uppercase;
   color: var(--gold);
 }
 
-/* BREATH */
+/* =========================
+   08. BREATH / MATERIAL IN MOTION
+   ========================= */
 
 .split-layout {
   display: grid;
@@ -352,7 +423,7 @@ p {
 }
 
 .split-layout p {
-  font-size: 1.08rem;
+  font-size: 0.86rem;
 }
 
 .motion-panel {
@@ -372,7 +443,8 @@ p {
   bottom: 28px;
   max-width: 430px;
   font-family: var(--sans);
-  font-size: 0.62rem;
+  font-size: 0.52rem;
+  line-height: 1.7;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--dim);
@@ -413,21 +485,38 @@ p {
 }
 
 @keyframes driftOne {
-  from { transform: translateX(0) scale(1); }
-  to { transform: translateX(80px) scale(1.12); }
+  from {
+    transform: translateX(0) scale(1);
+  }
+
+  to {
+    transform: translateX(80px) scale(1.12);
+  }
 }
 
 @keyframes driftTwo {
-  from { transform: rotate(0deg) translateY(0); }
-  to { transform: rotate(18deg) translateY(40px); }
+  from {
+    transform: rotate(0deg) translateY(0);
+  }
+
+  to {
+    transform: rotate(18deg) translateY(40px);
+  }
 }
 
 @keyframes driftThree {
-  from { transform: translateY(0); }
-  to { transform: translateY(-44px); }
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-44px);
+  }
 }
 
-/* ARCHIVE */
+/* =========================
+   09. ARCHIVE / REGISTRY
+   ========================= */
 
 .archive-grid {
   display: grid;
@@ -437,8 +526,8 @@ p {
 }
 
 .archive-card {
-  min-height: 180px;
-  padding: 38px 44px;
+  min-height: 170px;
+  padding: 34px 40px;
   border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.01);
@@ -454,9 +543,9 @@ p {
 
 .registry-code {
   display: block;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   font-family: var(--sans);
-  font-size: 0.62rem;
+  font-size: 0.48rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--gold);
@@ -464,18 +553,20 @@ p {
 
 .archive-card h3 {
   margin-bottom: 8px;
-  font-size: 1.5rem;
+  font-size: 1.05rem;
   letter-spacing: 0.04em;
 }
 
 .archive-card p {
-  margin-bottom: 18px;
+  margin-bottom: 16px;
+  font-size: 0.68rem;
+  line-height: 1.5;
   font-style: italic;
 }
 
 .status {
   font-family: var(--sans);
-  font-size: 0.58rem;
+  font-size: 0.48rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
 }
@@ -494,7 +585,9 @@ p {
   margin-top: 70px;
 }
 
-/* FOUNDRY */
+/* =========================
+   10. FOUNDRY
+   ========================= */
 
 .stats-grid {
   display: grid;
@@ -505,7 +598,7 @@ p {
 }
 
 .stat-card {
-  padding: 48px;
+  padding: 42px;
   border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
@@ -513,7 +606,7 @@ p {
 .stat-card span {
   display: block;
   margin-bottom: 14px;
-  font-size: 4.5rem;
+  font-size: 3.2rem;
   line-height: 1;
   color: var(--ivory);
 }
@@ -521,13 +614,15 @@ p {
 .stat-card p {
   margin-bottom: 0;
   font-family: var(--sans);
-  font-size: 0.62rem;
+  font-size: 0.5rem;
   letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--gold-soft);
 }
 
-/* ACQUIRE */
+/* =========================
+   11. ACQUISITION
+   ========================= */
 
 .acquire-section {
   display: flex;
@@ -543,6 +638,7 @@ p {
 .acquire-panel h2 {
   margin-left: auto;
   margin-right: auto;
+  font-size: clamp(1.7rem, 3vw, 3.4rem);
   font-style: italic;
   letter-spacing: 0.04em;
 }
@@ -551,9 +647,12 @@ p {
   max-width: 620px;
   margin-left: auto;
   margin-right: auto;
+  font-size: 0.82rem;
 }
 
-/* FOOTER */
+/* =========================
+   12. FOOTER
+   ========================= */
 
 .site-footer {
   min-height: 90px;
@@ -569,9 +668,15 @@ p {
   color: var(--dim);
 }
 
-/* MOBILE */
+/* =========================
+   13. MOBILE
+   ========================= */
 
 @media (max-width: 900px) {
+  :root {
+    --header-height: auto;
+  }
+
   .site-header {
     height: auto;
     min-height: 78px;
@@ -586,8 +691,27 @@ p {
     justify-content: flex-end;
   }
 
+  .site-nav a {
+    font-size: 0.54rem;
+  }
+
   .section {
+    min-height: auto;
     padding: 120px 24px 80px;
+  }
+
+  .hero-section {
+    min-height: 100vh;
+  }
+
+  .hero-inner::before {
+    width: 240px;
+    height: 240px;
+  }
+
+  .hero-inner::after {
+    font-size: 1.8rem;
+    letter-spacing: 0.26em;
   }
 
   .hero-inner h1 {
@@ -615,6 +739,15 @@ p {
     gap: 12px;
   }
 
+  h2 {
+    font-size: clamp(1.55rem, 7vw, 2.6rem);
+    letter-spacing: 0.08em;
+  }
+
+  p {
+    font-size: 0.78rem;
+  }
+
   .portal-grid,
   .archive-grid,
   .stats-grid,
@@ -622,14 +755,25 @@ p {
     grid-template-columns: 1fr;
   }
 
+  .portals-section .section-kicker,
+  .portals-section .section-heading {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+
   .portal-card {
     min-height: 360px;
+    padding: 46px 32px;
     border-right: none;
     border-bottom: 1px solid var(--line);
   }
 
   .portal-card h3 {
-    font-size: 3.1rem;
+    font-size: 2.65rem;
+  }
+
+  .portal-card p {
+    font-size: 0.72rem;
   }
 
   .archive-card,
@@ -641,9 +785,15 @@ p {
     font-size: 3.3rem;
   }
 
-  h2 {
-    font-size: clamp(2rem, 10vw, 3.6rem);
-    letter-spacing: 0.08em;
+  .motion-panel {
+    min-height: 360px;
+    margin-top: 54px;
+  }
+
+  .motion-panel p {
+    left: 24px;
+    right: 24px;
+    bottom: 24px;
   }
 
   .site-footer {
