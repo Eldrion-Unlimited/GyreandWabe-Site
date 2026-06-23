@@ -12,15 +12,15 @@
   --black-soft: #0a0907;
   --panel: #0d0c09;
 
-  --line: rgba(211, 174, 91, 0.16);
-  --line-strong: rgba(211, 174, 91, 0.38);
+  --line: rgba(211, 174, 91, 0.18);
+  --line-strong: rgba(211, 174, 91, 0.42);
 
   --gold: #c9a24f;
-  --gold-soft: #8a6a2d;
+  --gold-soft: #a98239;
 
   --ivory: #e9dec9;
-  --muted: #8d8373;
-  --dim: #50483c;
+  --muted: #b6ad9d;
+  --dim: #756a59;
 
   --serif: Georgia, "Times New Roman", serif;
   --sans: Arial, Helvetica, sans-serif;
@@ -99,8 +99,8 @@ h3 {
 
 p {
   color: var(--muted);
-  font-size: 0.68rem;
-  line-height: 1.72;
+  font-size: 1rem;
+  line-height: 1.75;
 }
 
 /* =========================
@@ -117,14 +117,15 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(5, 5, 4, 0.76);
+  background: rgba(5, 5, 4, 0.78);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(14px);
   z-index: 20;
 }
 
 .brand-mark {
-  font-size: 0.76rem;
+  font-family: var(--sans);
+  font-size: 0.82rem;
   letter-spacing: 0.34em;
   color: var(--ivory);
   text-transform: uppercase;
@@ -137,8 +138,8 @@ p {
 
 .site-nav a {
   font-family: var(--sans);
-  font-size: 0.56rem;
-  letter-spacing: 0.28em;
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--muted);
   transition:
@@ -161,41 +162,41 @@ p {
 }
 
 .section-kicker {
-  margin-bottom: 22px;
+  margin-bottom: 30px;
   font-family: var(--sans);
-  font-size: 0.4rem;
-  letter-spacing: 0.28em;
+  font-size: 0.62rem;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--gold-soft);
 }
 
 .eyebrow {
-  margin: 0 0 12px;
+  margin: 0 0 16px;
   font-family: var(--sans);
-  font-size: 0.42rem;
-  letter-spacing: 0.3em;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--gold);
 }
 
 h2 {
-  max-width: 660px;
-  font-size: clamp(1.1rem, 2vw, 2.15rem);
-  line-height: 1.22;
-  letter-spacing: 0.11em;
+  max-width: 840px;
+  font-size: clamp(1.85rem, 3vw, 3.75rem);
+  line-height: 1.16;
+  letter-spacing: 0.075em;
 }
 
 .section-heading {
-  max-width: 720px;
-  margin-bottom: 52px;
+  max-width: 900px;
+  margin-bottom: 60px;
 }
 
 .section-heading::after {
   content: "";
   display: block;
-  width: 56px;
+  width: 64px;
   height: 1px;
-  margin-top: 28px;
+  margin-top: 34px;
   background: var(--gold);
 }
 
@@ -216,8 +217,8 @@ h2 {
   padding: 0 30px;
   border: 1px solid var(--line-strong);
   font-family: var(--sans);
-  font-size: 0.65rem;
-  letter-spacing: 0.28em;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--ivory);
   background: transparent;
@@ -238,7 +239,7 @@ h2 {
 .button-primary {
   border-color: var(--gold);
   color: var(--gold);
-  background: rgba(201, 162, 79, 0.035);
+  background: rgba(201, 162, 79, 0.04);
 }
 
 .button-secondary {
@@ -313,8 +314,8 @@ h2 {
 
 .hero-subtitle {
   margin-top: 34px;
-  font-size: clamp(0.85rem, 1.5vw, 1.35rem);
-  letter-spacing: 0.52em;
+  font-size: clamp(0.95rem, 1.5vw, 1.4rem);
+  letter-spacing: 0.42em;
   text-transform: uppercase;
   color: var(--gold);
   font-style: italic;
@@ -333,10 +334,10 @@ h2 {
   gap: 48px;
   margin-top: auto;
   font-family: var(--sans);
-  font-size: 0.5rem;
-  letter-spacing: 0.28em;
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--dim);
+  color: var(--muted);
 }
 
 /* =========================
@@ -391,31 +392,32 @@ h2 {
 .portal-number {
   margin-bottom: auto;
   font-family: var(--sans);
-  font-size: 0.56rem;
-  letter-spacing: 0.24em;
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
   color: var(--dim);
 }
 
 .portal-card h3 {
   margin-bottom: 26px;
   font-size: clamp(2.75rem, 4.8vw, 5.8rem);
-  letter-spacing: 0.26em;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
 }
 
 .portal-card p {
-  max-width: 260px;
-  min-height: 58px;
-  font-size: 0.58rem;
-  line-height: 1.6;
-  opacity: 0.72;
+  max-width: 340px;
+  min-height: 84px;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  opacity: 1;
+  color: var(--muted);
 }
 
 .portal-link {
   margin-top: 24px;
   font-family: var(--sans);
-  font-size: 0.52rem;
-  letter-spacing: 0.26em;
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--gold);
 }
@@ -432,8 +434,8 @@ h2 {
 }
 
 .split-layout p {
-  font-size: 0.72rem;
-  line-height: 1.75;
+  font-size: 1rem;
+  line-height: 1.8;
 }
 
 .motion-panel {
@@ -451,13 +453,13 @@ h2 {
   position: absolute;
   left: 34px;
   bottom: 28px;
-  max-width: 430px;
+  max-width: 520px;
   font-family: var(--sans);
-  font-size: 0.48rem;
-  line-height: 1.7;
-  letter-spacing: 0.2em;
+  font-size: 0.74rem;
+  line-height: 1.65;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--dim);
+  color: var(--muted);
 }
 
 .motion-orb {
@@ -536,8 +538,8 @@ h2 {
 }
 
 .archive-card {
-  min-height: 145px;
-  padding: 28px 34px;
+  min-height: 165px;
+  padding: 32px 36px;
   border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.01);
@@ -555,29 +557,30 @@ h2 {
   display: block;
   margin-bottom: 14px;
   font-family: var(--sans);
-  font-size: 0.4rem;
-  letter-spacing: 0.22em;
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--gold);
 }
 
 .archive-card h3 {
-  margin-bottom: 8px;
-  font-size: 0.92rem;
+  margin-bottom: 10px;
+  font-size: 1.35rem;
+  line-height: 1.25;
   letter-spacing: 0.04em;
 }
 
 .archive-card p {
-  margin-bottom: 16px;
-  font-size: 0.58rem;
-  line-height: 1.5;
+  margin-bottom: 18px;
+  font-size: 0.92rem;
+  line-height: 1.6;
   font-style: italic;
 }
 
 .status {
   font-family: var(--sans);
-  font-size: 0.4rem;
-  letter-spacing: 0.25em;
+  font-size: 0.64rem;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
 }
 
@@ -594,7 +597,7 @@ h2 {
 }
 
 .sealed-card {
-  opacity: 0.62;
+  opacity: 0.66;
 }
 
 .sealed-card h3 {
@@ -630,7 +633,7 @@ h2 {
 .stat-card span {
   display: block;
   margin-bottom: 14px;
-  font-size: 2.65rem;
+  font-size: 2.85rem;
   line-height: 1;
   color: var(--ivory);
 }
@@ -638,8 +641,9 @@ h2 {
 .stat-card p {
   margin-bottom: 0;
   font-family: var(--sans);
-  font-size: 0.42rem;
-  letter-spacing: 0.24em;
+  font-size: 0.72rem;
+  line-height: 1.45;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--gold-soft);
 }
@@ -662,7 +666,7 @@ h2 {
 .acquire-panel h2 {
   margin-left: auto;
   margin-right: auto;
-  font-size: clamp(1.25rem, 2.4vw, 2.5rem);
+  font-size: clamp(1.8rem, 3vw, 3.5rem);
   font-style: italic;
   letter-spacing: 0.04em;
 }
@@ -671,7 +675,8 @@ h2 {
   max-width: 620px;
   margin-left: auto;
   margin-right: auto;
-  font-size: 0.68rem;
+  font-size: 1rem;
+  line-height: 1.75;
 }
 
 /* =========================
@@ -686,8 +691,8 @@ h2 {
   justify-content: space-between;
   border-top: 1px solid var(--line);
   font-family: var(--sans);
-  font-size: 0.48rem;
-  letter-spacing: 0.24em;
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--dim);
 }
@@ -749,19 +754,19 @@ h2 {
 }
 
 .artifact-meta .registry-code {
-  font-size: 0.52rem;
+  font-size: 0.68rem;
 }
 
 .artifact-meta h3 {
   margin-bottom: 10px;
-  font-size: 1.22rem;
+  font-size: 1.35rem;
   letter-spacing: 0.04em;
 }
 
 .artifact-meta p {
   max-width: 420px;
   margin-bottom: 22px;
-  font-size: 0.74rem;
+  font-size: 0.95rem;
   line-height: 1.65;
   color: var(--muted);
 }
@@ -772,8 +777,8 @@ h2 {
   padding: 12px 16px;
   border: 1px solid var(--line-strong);
   font-family: var(--sans);
-  font-size: 0.46rem;
-  letter-spacing: 0.24em;
+  font-size: 0.64rem;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--gold);
   transition:
@@ -816,8 +821,8 @@ h2 {
   border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   font-family: var(--sans);
-  font-size: 0.48rem;
-  letter-spacing: 0.24em;
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--gold-soft);
   background: rgba(255, 255, 255, 0.01);
@@ -832,7 +837,7 @@ h2 {
   background: rgba(0, 0, 0, 0.38);
   color: var(--ivory);
   font-family: var(--serif);
-  font-size: 0.78rem;
+  font-size: 1rem;
   outline: none;
 }
 
@@ -893,7 +898,7 @@ h2 {
   }
 
   .site-nav a {
-    font-size: 0.54rem;
+    font-size: 0.62rem;
   }
 
   .section {
@@ -941,12 +946,22 @@ h2 {
     gap: 12px;
   }
 
-  h2 {
-    font-size: clamp(1.25rem, 6vw, 2.1rem);
+  .section-kicker {
+    font-size: 0.56rem;
   }
 
-  p {
-    font-size: 0.7rem;
+  .eyebrow {
+    font-size: 0.64rem;
+  }
+
+  h2 {
+    font-size: clamp(1.7rem, 7vw, 2.7rem);
+  }
+
+  p,
+  .split-layout p,
+  .acquire-panel p {
+    font-size: 0.96rem;
   }
 
   .portal-grid,
@@ -974,12 +989,16 @@ h2 {
   }
 
   .portal-card p {
-    font-size: 0.64rem;
+    font-size: 0.9rem;
   }
 
   .archive-card,
   .stat-card {
     padding: 32px 26px;
+  }
+
+  .archive-card p {
+    font-size: 0.9rem;
   }
 
   .stat-card span {
@@ -995,6 +1014,10 @@ h2 {
     left: 24px;
     right: 24px;
     bottom: 24px;
+  }
+
+  .artifact-meta p {
+    font-size: 0.94rem;
   }
 
   .site-footer {
@@ -1021,7 +1044,7 @@ h2 {
   }
 
   .artifact-meta p {
-    font-size: 0.78rem;
+    font-size: 0.94rem;
   }
 
   .form-grid {
