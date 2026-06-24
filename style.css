@@ -1057,6 +1057,7 @@ h2 {
 }
 /* =========================================================
    INDEX VIDEO PANEL — THE BREATH
+   OUTSIDE ALL MEDIA QUERIES
    ========================================================= */
 
 .video-panel {
@@ -1069,11 +1070,13 @@ h2 {
 .motion-video {
   position: absolute;
   inset: 0;
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.82;
-  filter: contrast(1.08) brightness(0.74) saturate(0.92);
+  opacity: 0.85;
+  filter: contrast(1.08) brightness(0.78) saturate(0.95);
+  z-index: 0;
 }
 
 .video-shade {
@@ -1081,7 +1084,12 @@ h2 {
   inset: 0;
   pointer-events: none;
   background:
-    linear-gradient(90deg, rgba(5, 5, 4, 0.72), rgba(5, 5, 4, 0.18) 48%, rgba(5, 5, 4, 0.76)),
+    linear-gradient(
+      90deg,
+      rgba(5, 5, 4, 0.72),
+      rgba(5, 5, 4, 0.18) 48%,
+      rgba(5, 5, 4, 0.76)
+    ),
     radial-gradient(circle at center, transparent 28%, rgba(0, 0, 0, 0.58) 100%);
   z-index: 1;
 }
@@ -1092,4 +1100,16 @@ h2 {
   bottom: 28px;
   max-width: 520px;
   z-index: 2;
+}
+
+@media (max-width: 700px) {
+  .video-panel {
+    min-height: 360px;
+  }
+
+  .video-panel p {
+    left: 24px;
+    right: 24px;
+    bottom: 24px;
+  }
 }
