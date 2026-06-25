@@ -1114,3 +1114,46 @@ h2 {
     bottom: 24px;
   }
 }
+
+/* =========================================================
+   INDEX REGISTRY THUMBNAILS
+   ========================================================= */
+
+.archive-image-card {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.archive-thumb {
+  width: 120px;
+  height: 120px;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(rgba(5, 5, 4, 0.08), rgba(5, 5, 4, 0.42)),
+    var(--archive-img),
+    radial-gradient(circle at center, rgba(201, 162, 79, 0.16), transparent 68%),
+    #090806;
+  background-size: cover, cover, cover, auto;
+  background-position: center;
+}
+
+.archive-info {
+  min-width: 0;
+}
+
+.acquired-card .archive-thumb {
+  filter: grayscale(0.25) brightness(0.78);
+}
+
+@media (max-width: 700px) {
+  .archive-image-card {
+    grid-template-columns: 1fr;
+  }
+
+  .archive-thumb {
+    width: 100%;
+    height: 220px;
+  }
+}
