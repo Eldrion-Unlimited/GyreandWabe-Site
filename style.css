@@ -1157,3 +1157,37 @@ h2 {
     height: 220px;
   }
 }
+/* =========================================================
+   SINGLE ARTIFACT SHOWCASE PAGES
+   ========================================================= */
+
+.artifact-showcase-panel {
+  min-height: 620px;
+}
+
+.artifact-showcase-image {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 5, 4, 0.72),
+      rgba(5, 5, 4, 0.18) 48%,
+      rgba(5, 5, 4, 0.76)
+    ),
+    var(--artifact-img),
+    #050504;
+  background-size: cover, cover, auto;
+  background-position: center;
+  z-index: 0;
+}
+
+.artifact-showcase-panel p {
+  z-index: 2;
+}
+
+@media (max-width: 700px) {
+  .artifact-showcase-panel {
+    min-height: 420px;
+  }
+}
