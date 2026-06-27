@@ -1185,7 +1185,86 @@ h2 {
 .artifact-showcase-panel p {
   z-index: 2;
 }
+/* =========================================================
+   LUXURY ARTIFACT IMAGE UPGRADE
+   Bigger gallery images for dice + artifact pages
+   ========================================================= */
 
+.artifact-card {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  min-height: 420px;
+  overflow: hidden;
+}
+
+.artifact-image {
+  min-height: 420px;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(5, 5, 4, 0.06),
+      rgba(5, 5, 4, 0.38)
+    ),
+    var(--artifact-img),
+    radial-gradient(circle at center, rgba(201, 162, 79, 0.12), transparent 68%),
+    #070604;
+  background-size: cover, cover, cover, auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.artifact-meta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 42px;
+}
+
+/* Bigger hero image panels on individual artifact pages */
+.artifact-showcase-panel {
+  min-height: 720px;
+  margin-top: 70px;
+}
+
+.artifact-showcase-image {
+  background-size: cover, cover, auto;
+  background-position: center;
+}
+
+/* Make two-column ledger feel more editorial */
+.two-column-ledger {
+  gap: 36px;
+}
+
+/* Mobile correction */
+@media (max-width: 900px) {
+  .artifact-card {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .artifact-image {
+    min-height: 440px;
+  }
+
+  .artifact-meta {
+    padding: 34px 28px;
+  }
+
+  .artifact-showcase-panel {
+    min-height: 520px;
+  }
+}
+
+@media (max-width: 600px) {
+  .artifact-image {
+    min-height: 360px;
+  }
+
+  .artifact-showcase-panel {
+    min-height: 430px;
+  }
+}
 @media (max-width: 700px) {
   .artifact-showcase-panel {
     min-height: 420px;
