@@ -1294,3 +1294,108 @@ h2 {
 .checkbox-field span {
   display: block;
 }
+/* =========================================================
+   GLOBAL WIDTH CONTROL — NO SIDEWAYS SCROLL, EVER
+   ========================================================= */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+main,
+section,
+header,
+footer,
+.site-header,
+.site-nav,
+.section,
+.hero-section,
+.collection-section,
+.foundry-section,
+.acquire-section,
+.hero-inner,
+.split-layout,
+.stats-grid,
+.artifact-grid,
+.artifact-card,
+.artifact-meta,
+.acquire-panel,
+.motion-panel {
+  max-width: 100%;
+  min-width: 0;
+}
+
+/* Media should never punch wider than the screen */
+img,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Background-image artifact containers stay contained */
+.artifact-image,
+.artifact-showcase-image {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Buttons wrap clean instead of forcing page width */
+.hero-actions {
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+
+/* Navigation wraps instead of causing horizontal scroll */
+.site-nav {
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+
+/* Long titles stay inside the page */
+.hero-inner h1,
+.artifact-meta h3,
+.acquire-panel h2,
+.section-heading h2,
+.split-layout h2 {
+  max-width: 100%;
+  min-width: 0;
+  overflow-wrap: normal;
+  word-break: normal;
+  text-wrap: balance;
+}
+
+/* Mobile tightening */
+@media (max-width: 700px) {
+  .hero-inner h1 {
+    font-size: clamp(2.4rem, 15vw, 5.5rem);
+    line-height: 0.95;
+  }
+
+  .artifact-meta h3,
+  .acquire-panel h2,
+  .section-heading h2,
+  .split-layout h2 {
+    font-size: clamp(1.6rem, 8vw, 3rem);
+    line-height: 1;
+  }
+
+  .hero-actions {
+    width: 100%;
+  }
+
+  .hero-actions .button {
+    width: 100%;
+    text-align: center;
+  }
+}
