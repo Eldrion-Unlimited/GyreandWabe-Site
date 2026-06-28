@@ -1,108 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Acquisition Request — Gyre & Wabe</title>
-  <meta
-    name="description"
-    content="Request acquisition of a registered Gyre & Wabe artifact."
-  />
-
-  <link rel="stylesheet" href="style.css" />
-</head>
-
-<body>
-  <header class="site-header">
-    <a class="brand-mark" href="index.html#silence" aria-label="Gyre & Wabe Home">
-      G · W
-    </a>
-
-    <nav class="site-nav" aria-label="Primary navigation">
-      <a href="index.html#portals">Collection</a>
-      <a href="dice.html#high-rollers">High Rollers</a>
-      <a href="dice.html#shot-callers">Shot Callers</a>
-      <a href="dice.html#open-contract">Open Contract</a>
-    </nav>
-  </header>
-
-  <main>
-    <section class="section acquire-section">
-      <div class="section-kicker">Acquisition Request</div>
-
-      <div class="acquire-panel">
-        <p>Registered artifact selected</p>
-
-        <h1>Begin Acquisition</h1>
-
-        <p>
-          You are requesting acquisition information for:
-        </p>
-
-        <h2 id="artifact-display">No artifact selected</h2>
-
-        <form
-          class="acquisition-form"
-          action="https://formspree.io/f/YOUR-FORM-ID"
-          method="POST"
-        >
-          <input
-            type="hidden"
-            id="artifact-input"
-            name="artifact"
-            value=""
-          />
-
-          <label>
-            Name
-            <input type="text" name="name" required />
-          </label>
-
-          <label>
-            Email
-            <input type="email" name="email" required />
-          </label>
-
-          <label>
-            Message
-            <textarea name="message" rows="6">
-I would like to request acquisition information for this Gyre & Wabe artifact.
-            </textarea>
-          </label>
-
-          <div class="hero-actions">
-            <button class="button button-primary" type="submit">
-              Submit Request
-            </button>
-
-            <a class="button button-secondary" href="dice.html#high-rollers">
-              Return to High Rollers
-            </a>
-          </div>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <span>© Gyre &amp; Wabe</span>
-    <span id="footer-artifact">Acquisition Request</span>
-  </footer>
-
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const artifact = params.get("artifact");
-
-    const artifactDisplay = document.getElementById("artifact-display");
-    const artifactInput = document.getElementById("artifact-input");
-    const footerArtifact = document.getElementById("footer-artifact");
-
-    if (artifact) {
-      artifactDisplay.textContent = artifact;
-      artifactInput.value = artifact;
-      footerArtifact.textContent = artifact + " · Acquisition Request";
-    }
-  </script>
-</body>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Begin Acquisition</title>
+    <script async src="https://tally.so/widgets/embed.js"></script>
+    <style type="text/css">
+      html { margin: 0; height: 100%; overflow: hidden; }
+      iframe { position: absolute; top: 0; right: 0; bottom: 0; left: 0; border: 0; }
+    </style>
+  </head>
+  <body>
+    <iframe data-tally-src="https://tally.so/r/WOgo2a?transparentBackground=1" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0" title="Begin Acquisition"></iframe>
+  </body>
 </html>
